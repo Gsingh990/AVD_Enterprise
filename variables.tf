@@ -85,12 +85,6 @@ variable "host_pool_max_session_limit" {
   default     = 10
 }
 
-variable "host_pool_registration_token" {
-  description = "The registration token for the AVD host pool."
-  type        = string
-  sensitive   = true
-}
-
 variable "host_pool_custom_rdp_properties" {
   description = "Custom RDP properties for the Host Pool."
   type        = string
@@ -160,19 +154,25 @@ variable "session_host_image_publisher" {
 variable "session_host_image_offer" {
   description = "The offer of the VM image for AVD session hosts."
   type        = string
-  default     = "Windows-10"
+  default     = "Windows-11"
 }
 
 variable "session_host_image_sku" {
   description = "The SKU of the VM image for AVD session hosts."
   type        = string
-  default     = "win10-21h2-avd"
+  default     = "win11-21h2-avd"
 }
 
 variable "session_host_image_version" {
   description = "The version of the VM image for AVD session hosts."
   type        = string
   default     = "latest"
+}
+
+variable "host_pool_registration_token" {
+  description = "The registration token for the AVD host pool."
+  type        = string
+  sensitive   = true
 }
 
 variable "session_host_admin_username" {

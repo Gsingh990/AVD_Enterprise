@@ -21,7 +21,7 @@ variable "host_pool_id" {
 variable "host_pool_registration_token" {
   description = "The registration token for the AVD Host Pool."
   type        = string
-  sensitive   = true
+  default     = "" # Make it optional with a default empty string
 }
 
 variable "session_host_vm_count" {
